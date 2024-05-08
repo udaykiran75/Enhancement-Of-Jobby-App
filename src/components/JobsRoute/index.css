@@ -1,0 +1,130 @@
+.jobsRoute-main-container {
+  background-color: #000000;
+  min-height: 100vh;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.input-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: 1px solid #b6c5ff;
+  margin-top: 10px;
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
+}
+.searchInput-box {
+  width: 90%;
+  padding: 9px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  background-color: #000000;
+  color: white;
+}
+.search-icon-btn {
+  background-color: #272727;
+  border: none;
+  outline: none;
+  width: 10%;
+  color: white;
+  cursor: pointer;
+}
+.horizantal-line {
+  border: 1px solid #b6c5ff;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+.jobs-notFound-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  @media screen and (min-width: 768px) {
+    height: 90vh;
+  }
+}
+.no-jobs-image {
+  width: 290px;
+}
+.nojobs-heading {
+  font-size: 20px;
+  font-family: Roboto;
+  color: #ffffff;
+  margin: 0px;
+}
+.nojobs-para {
+  font-family: Roboto;
+  color: #ffffff;
+}
+.jobs-failure-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  @media screen and (min-width: 768px) {
+    height: 90vh;
+  }
+}
+.jobs-failure-image {
+  width: 300px;
+}
+.jobs-failure-heading {
+  font-size: 20px;
+  font-family: Roboto;
+  color: #ffffff;
+}
+.jobs-failure-para {
+  font-family: Roboto;
+  color: #ffffff;
+  margin-top: 0px;
+}
+.retry-button {
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 15px;
+  height: 40px;
+  width: 120px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.jobs-list-container {
+  padding: 0px;
+  list-style-type: none;
+  margin-top: 35px;
+}
+.only-medium-above-device {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .only-small-device {
+    display: none;
+  }
+  .only-medium-above-device {
+    display: flex;
+  }
+  .jobsRoute-main-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .medium-large-view-one {
+    width: 25vw;
+  }
+  .medium-large-view-two {
+    width: 50vw;
+  }
+}

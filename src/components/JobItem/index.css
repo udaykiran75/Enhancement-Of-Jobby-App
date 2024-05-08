@@ -1,0 +1,71 @@
+.jobItem-container {
+  background-color: #121212;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 15px;
+}
+.logo-heading-container {
+  display: flex;
+}
+.company-logo {
+  width: 45px;
+  height: 45px;
+  margin-right: 15px;
+}
+.company-title {
+  color: white;
+  font-family: Roboto;
+  font-size: 18px;
+  margin: 0px;
+}
+.rating-container {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+#star-icon {
+  color: #fbbf24;
+  margin-right: 9px;
+}
+.no-star {
+  font-family: Roboto;
+  color: white;
+  margin: 0px;
+}
+.link-component-container {
+  text-decoration: none;
+  color: #ffffff;
+}
+.location-salary-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.job-icons-con {
+  display: flex;
+}
+.employment-type-on {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+.react-icon-job {
+  margin-right: 5px;
+}
+.salary-for-annum {
+  font-family: Roboto;
+  font-size: 17px;
+}
+.horizantal {
+  margin: 0px;
+  border-color: #b6c5ff;
+}
+.description-head {
+  font-size: 18px;
+  font-family: Roboto;
+}
+.job-description {
+  font-family: Roboto;
+  line-height: 1.6;
+}

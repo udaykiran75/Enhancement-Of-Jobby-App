@@ -1,0 +1,28 @@
+.checkboxs-title {
+  color: white;
+  font-size: 17px;
+  font-family: Roboto;
+}
+.list-items-div {
+  padding: 0px;
+  list-style-type: none;
+}
+.checkbox-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.checkbox-label {
+  color: white;
+  font-family: Roboto;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.horizantal-line {
+  border: 1px solid #b6c5ff;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.checkbox {
+  cursor: pointer;
+}

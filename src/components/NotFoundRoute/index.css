@@ -1,0 +1,17 @@
+.notfound-container {
+  background-color: #202020;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.notfound-head {
+  color: #ffffff;
+  font-size: 20px;
+  font-family: Roboto;
+}
+.notfound-para {
+  color: #ffffff;
+  font-family: Roboto;
+}
