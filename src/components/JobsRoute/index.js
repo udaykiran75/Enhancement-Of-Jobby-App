@@ -47,6 +47,29 @@ const salaryRangesList = [
   },
 ]
 
+const locationBasedList = [
+  {
+    locationId: 'HYDERABAD',
+    label: 'Hyderabad',
+  },
+  {
+    locationId: 'BANGALORE',
+    label: 'Bangalore',
+  },
+  {
+    locationId: 'CHENNAI',
+    label: 'Chennai',
+  },
+  {
+    locationId: 'DELHI',
+    label: 'Delhi',
+  },
+  {
+    locationId: 'MUMBAI',
+    label: 'Mumbai',
+  },
+]
+
 const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
@@ -60,6 +83,7 @@ class JobsRoute extends Component {
     searchInput: '',
     employmentTypes: [],
     salaryRange: '',
+    jobLocations: [],
     allJobsData: [],
   }
 
@@ -125,6 +149,38 @@ class JobsRoute extends Component {
   selectSalaryRange = event => {
     const {value} = event.target
     this.setState({salaryRange: value}, this.getAllJobsData)
+  }
+
+  getLocationBasedJobs = () => {
+    const {jobLocations, allJobsData} = this.state
+    const filteredJobs = allJobsData.filter(jobItem =>
+      jobLocations.includes(jobItem.location),
+    )
+    console.log(filteredJobs)
+    if (filteredJobs.length > 0) {
+      this.setState({allJobsData: filteredJobs})
+    } else {
+      this.getAllJobsData()
+    }
+  }
+
+  selectJobLoactions = event => {
+    const {value, checked} = event.target
+    const {jobLocations} = this.state
+    if (checked === true) {
+      this.setState(
+        {jobLocations: [...jobLocations, value]},
+        this.getLocationBasedJobs,
+      )
+    } else {
+      const removedJobLocationId = jobLocations.filter(
+        eachId => eachId !== value,
+      )
+      this.setState(
+        {jobLocations: removedJobLocationId},
+        this.getLocationBasedJobs,
+      )
+    }
   }
 
   renderSearchInput = () => {
@@ -221,7 +277,7 @@ class JobsRoute extends Component {
   }
 
   render() {
-    const {employmentTypes, salaryRange, allJobsData} = this.state
+    const {employmentTypes, salaryRange, allJobsData, jobLocations} = this.state
     console.log(allJobsData)
     return (
       <div>
@@ -238,6 +294,9 @@ class JobsRoute extends Component {
               salaryRange={salaryRange}
               salaryRangesList={salaryRangesList}
               selectSalaryRange={this.selectSalaryRange}
+              jobLocations={jobLocations}
+              jobLocationsList={locationBasedList}
+              selectJobLoactions={this.selectJobLoactions}
             />
           </div>
           <div className="medium-large-view-two">

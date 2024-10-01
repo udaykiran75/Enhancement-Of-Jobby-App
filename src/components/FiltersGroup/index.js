@@ -8,6 +8,9 @@ const FiltersGroup = props => {
     salaryRange,
     salaryRangesList,
     selectSalaryRange,
+    jobLocations,
+    jobLocationsList,
+    selectJobLoactions,
   } = props
 
   const renderEmploymentTypes = () => (
@@ -62,11 +65,36 @@ const FiltersGroup = props => {
     </>
   )
 
+  const renderJobLocationsList = () => (
+    <>
+      <h1 className="checkboxs-title">Job Locations</h1>
+      <ul className="list-items-div">
+        {jobLocationsList.map(eachItem => (
+          <li key={eachItem.locationId} className="checkbox-container">
+            <input
+              type="checkbox"
+              id={eachItem.locationId}
+              value={eachItem.label}
+              checked={jobLocations.includes(eachItem.label)}
+              className="checkbox"
+              onChange={selectJobLoactions}
+            />
+            <label className="checkbox-label" htmlFor={eachItem.locationId}>
+              {eachItem.label}
+            </label>
+          </li>
+        ))}
+      </ul>
+    </>
+  )
+
   return (
     <>
       {renderEmploymentTypes()}
       <hr className="horizantal-line" />
       {renderSalaryRanges()}
+      <hr className="horizantal-line" />
+      {renderJobLocationsList()}
     </>
   )
 }
